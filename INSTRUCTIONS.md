@@ -2,7 +2,7 @@
 
 ## Note on SSH
 
-* If you have not done so already, you will need to create an SSH key for your linux account (e.g., in your SageCloud node):
+* If you have not done so already, you will need to create an [SSH key](http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch01_01.htm) for your linux account (e.g., in your SageCloud node):
     * In bash, enter the command ```ssh-keygen``` and hit Enter several times to generate the files ```~/.ssh/id_rsa``` and ```~/.ssh/id_rsa.pub```. These are your SSH keys.
     * Print the contents of your public key to the screen with ```cat ~/.ssh/id_rsa.pub```. Copy the contents (starting with ```ssh-rsa``` and ending with ```@somehostname```). Go to your GitHub account, click on the top-right corner menu, and go to Settings. In the "SSH and GPG keys" tab, add a "New SSH key", then paste your public key into the indicated "Key" text box, and give your new key a suitable "Title" so that you can recognize which computer it belongs to.
     * Finally, back in your original bash shell, enter ```ssh git@github.com``` to test that your key authenticates properly. If successful, you will see a message similar to ```Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.``` after which it will exit.
