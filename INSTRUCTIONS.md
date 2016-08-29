@@ -12,7 +12,6 @@
 * To make your life easier, run the following commands in a bash terminal to set good default global options for ```git``` in your bash environment (this only has to be done once):
     * ```git config --global user.name "your full name here"```
     * ```git config --global user.email "youremail@here"```
-    * ```git config --global push.default simple```
     * ```git config --global core.editor vim```
 
 ## This Assignment
