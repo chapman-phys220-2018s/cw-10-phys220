@@ -31,9 +31,8 @@
     * Reread the __Honor Pledge__ again and 'sign' it with your name at the end
 
 * Connnect the repository to Travis CI
-    * On the GitHub site, go to ```settings``` then to ```Webhooks & services```
-    * Then click on ```Add service``` and scroll to ```Travis CI```.
-    * This takes you to a new page. Scroll to the bottom and click ```Add service```
+    * On the GitHub site, go to the upper-right menu, then to ```Integrations```
+    * Click on ```Travis CI``` and Add the service. Authorize it if necessary.
 
 * Correctly document each source file
     * Refer to the templates in the info repository for more information    
