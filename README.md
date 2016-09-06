@@ -2,17 +2,21 @@
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-01-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-01-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-02-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-02-YOURNAME)
 
-**Due date:** 2016/09/06
+**Due date:** 2016/09/13
 
 ## Specification
 
-Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
+Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
 
-1. Using ```vim``` in a terminal, create a ```bash``` script named ```mktmpfiles.sh``` that, when executed, creates a new directory ```testfiles``` in the current working directory, then changes the working directory to the newly created directory, then creates 100 empty new files named ```file001.tmp``` through ```file100.tmp```, then changes the working directory back to the original directory. Commit only the file ```mktmpfiles.sh``` to GitHub.
-1. Using ```vim``` in a terminal, create a LaTeX file ```testlatex.tex``` (using the template in the ```info``` repository). In this file write an explanation of what the definition of the derivative $f'(x)$ of a function $f(x)$ means.  Include both inline and numbered equations, as well as a proper title, abstract, and section headings. Find a suitable image to illustrate your definition online, and include it as a figure, with proper citation of the source. After ensuring that your LaTeX file compiles properly to pdf, commit only the source file ```testlatex.tex``` to GitHub.
-1. Using ```vim``` in  a terminal, create a python file ```testpython.py```. In this file write only a single function ```test_trivial()``` that contains only the line ```assert True```. Commit this python file to GitHub and ensure that the Travis tests detect it and report a passing status. You will need to edit the links in README file and commit the changes to GitHub to see the Travis status image.
+1. Exercise 2.6 (```coor.py```)
+1. Exercise 3.12 (```pathlength.py```)
+1. Exercise 3.20 (```kinematics.py```)
+
+Finally, to cleanly present your work, create a Jupyter notebook ```cw1.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
+
+Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
 ## Assessment
 
