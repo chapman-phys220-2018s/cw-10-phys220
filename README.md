@@ -1,4 +1,4 @@
-# PHYS220 CW 1
+# PHYS220 CW 2
 
 **Author(s):** _\<your name(s)\>_
 
@@ -14,7 +14,7 @@ Complete the following exercises from the primary textbook, placing your solutio
 1. Exercise 3.12 (```pathlength.py```)
 1. Exercise 3.20 (```kinematics.py```)
 
-Finally, to cleanly present your work, create a Jupyter notebook ```cw1.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
+Finally, to cleanly present your work, create a Jupyter notebook ```cw2.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
