@@ -5,6 +5,6 @@ python:
 install: "pip install pylint sympy"
 # command to run tests
 script:
-  - "nosetests *.py"
+  - "if [ -f *.py ]; then nosetests *.py; fi"
 notifications:
   email: false
