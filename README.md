@@ -1,20 +1,23 @@
-# PHYS220 CW 2
+# PHYS220 CW 3
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-02-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-02-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-03-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-03-YOURNAME)
 
-**Due date:** 2016/09/13
+**Due date:** 2016/09/20
 
 ## Specification
 
 Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
 
-1. Exercise 2.6 (```coor.py```)
-1. Exercise 3.12 (```pathlength.py```)
-1. Exercise 3.20 (```kinematics.py```)
+Note: Use your best judgment for how to properly organize your code into functions and modules. Use the problems as guidelines for the idea, but write the best code you can. Plot only in Jupyter, loading modules of .py files as needed.
 
-Finally, to cleanly present your work, create a Jupyter notebook ```cw2.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
+1. Exercise 5.3 (```fill_arrays_vectorized.py```)
+1. Exercise 5.9 (```plot_ball1.py```)
+1. Exercise 5.13 (```plot_trajectory.py```)
+1. Exercise 5.14 (```read_2columns.py```)
+
+Finally, to cleanly present your work, create a Jupyter notebook ```cw3.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
