@@ -1,22 +1,22 @@
-# PHYS220 CW 4
+# PHYS220 CW 5
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-04-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-05-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-05-YOURNAME)
 
-**Due date:** 2016/09/27
+**Due date:** 2016/10/04
 
 ## Specification
 
-Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
+**Note: As of this assignment, we will be switching to Python3 officially.**
 
-Note: Use your best judgment for how to properly organize your code into functions and modules. Use the problems as guidelines for the idea, but write the best code you can. Plot only in Jupyter, loading modules of .py files as needed.
-
-1. Exercise A.1 (```sequence_limits.py```)
-1. Exercise A.2 (```pi_sequences.py```)
-1. Exercise A.12 (```diffeq_midpoint.py```)
-
-Finally, to cleanly present your work, create a Jupyter notebook ```cw4.ipynb``` that imports each of your python files as modules and demonstrates the functionality. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. Check that exporting the notebook to pdf via LaTeX produces nice results.
+1. Using a PocketLab in class, take the following set of data:
+    * Turn on 2 graphs: 3-axis acceleration, and altitude
+    * By holding the device with a rigid orientation (z-axis aligned with vertical - why is this advisable?), take a recorded set of data while moving the device along an interesting path. As a suggestion, try a vertical helix. Be sure to keep your motions smooth, and changing slowly enough that the data points are being sampled fast enough to resolve the acceleration data.
+    * Email yourself the dataset, which will arrive as a ```.csv``` file.
+1. Read up on the ```pandas``` extension to ```numpy``` [here](http://slides.com/profdressel/numpy-and-pandas-overview). Try out everything in an ```ipython``` interpreter to make sure you understand what is going on. Discuss with your teammates. 
+1. Write a python module ```kinematics.py``` that integrates your acceleration data to produce a 3D position trajectory of the device during your experiment. Remember that $\vec{v}(t) = \int \vec{a}(t)dt$ and $\vec{x}(t) = \int \vec{v}(t)dt$ analytically. Explain what you have to do numerically to perform these integrations with the actual collected data.
+1. Create a Jupyter notebook ```cw4.ipynb``` that uses ```pandas``` to plot the data sets you have taken using ```matplotlib```. Import ```kinematics.py``` and plot your reconstructed trajectory for the device. Compare the z-component of this trajectory to the collected altitude data. Do they agree? Discuss your findings and conclusions in your notebook.
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
