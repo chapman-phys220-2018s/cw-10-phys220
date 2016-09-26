@@ -16,7 +16,7 @@
     * Email yourself the dataset, which will arrive as a ```.csv``` file.
 1. Read up on the ```pandas``` extension to ```numpy``` [here](http://slides.com/profdressel/numpy-and-pandas-overview). Try out everything in an ```ipython``` interpreter to make sure you understand what is going on. Discuss with your teammates. 
 1. Write a python module ```kinematics.py``` that integrates your acceleration data to produce a 3D position trajectory of the device during your experiment. Remember that $\vec{v}(t) = \int \vec{a}(t)dt$ and $\vec{x}(t) = \int \vec{v}(t)dt$ analytically. Explain what you have to do numerically to perform these integrations with the actual collected data.
-1. Create a Jupyter notebook ```cw4.ipynb``` that uses ```pandas``` to plot the data sets you have taken using ```matplotlib```. Import ```kinematics.py``` and plot your reconstructed trajectory for the device. Compare the z-component of this trajectory to the collected altitude data. Do they agree? Discuss your findings and conclusions in your notebook.
+1. Create a Jupyter notebook ```cw5.ipynb``` that uses ```pandas``` to plot the data sets you have taken using ```matplotlib```. Import ```kinematics.py``` and plot your reconstructed trajectory for the device. Compare the z-component of this trajectory to the collected altitude data. Do they agree? Discuss your findings and conclusions in your notebook.
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
