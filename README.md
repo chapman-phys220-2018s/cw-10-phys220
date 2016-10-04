@@ -1,22 +1,22 @@
-# PHYS220 CW 5
+# PHYS220 CW 6
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-05-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-05-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-06-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-06-YOURNAME)
 
-**Due date:** 2016/10/04
+**Due date:** 2016/10/11
 
 ## Specification
 
-**Note: As of this assignment, we will be switching to Python3 officially.**
+**Reminder: We have switched to Python3 officially.**
 
-1. Using a PocketLab in class, take the following set of data:
-    * Turn on 2 graphs: 3-axis acceleration, and altitude
-    * By holding the device with a rigid orientation (z-axis aligned with vertical - why is this advisable?), take a recorded set of data while moving the device along an interesting path. As a suggestion, try a vertical helix. Be sure to keep your motions smooth, and changing slowly enough that the data points are being sampled fast enough to resolve the acceleration data.
-    * Email yourself the dataset, which will arrive as a ```.csv``` file.
-1. Read up on the ```pandas``` extension to ```numpy``` [here](http://slides.com/profdressel/numpy-and-pandas-overview). Try out everything in an ```ipython``` interpreter to make sure you understand what is going on. Discuss with your teammates. 
-1. Write a python module ```kinematics.py``` that integrates your acceleration data to produce a 3D position trajectory of the device during your experiment. Remember that $\vec{v}(t) = \int \vec{a}(t)dt$ and $\vec{x}(t) = \int \vec{v}(t)dt$ analytically. Explain what you have to do numerically to perform these integrations with the actual collected data.
-1. Create a Jupyter notebook ```cw5.ipynb``` that uses ```pandas``` to plot the data sets you have taken using ```matplotlib```. Import ```kinematics.py``` and plot your reconstructed trajectory for the device. Compare the z-component of this trajectory to the collected altitude data. Do they agree? Discuss your findings and conclusions in your notebook.
+1. In a python module ```calculus.py``` create a vectorized version of a central finite difference. That is, given a discretized function $f = (f_1, \ldots, f_N)$ defined as $f_i = f(x_i)$ on a grid of points $x_i$ from $i=0$ to $i=N$ with fixed spacing $x_{i+1} - x_i = h$, the central difference at the point $f_i$ is: $$Df_i = (f_{i+1} - f_{i-1}) / (2h)$$. Implement this central difference operation as a matrix product of a derivative matrix $D$ with $f$ such that the central difference formula is satisfied for all non-boundary points of $f$. What dimensions must this matrix have to produce the correct answer? How should you handle the boundary points? Test your implementation to make sure it works as you expect. 
+1. Create a vectorized version of a second-order central finite difference (i.e., repeat the first-order finite difference formula from above twice - what second-order formula do you get?). Implement this second-order derivative as a matrix product of a second-order derivative matrix $D2$ with $f$. Is $D2$ the same thing as squaring the matrix $D$ from the previous exercise?
+1. Create a vectorized version of the trapezoidal integration rule. That is, given a discretized function $f$ defined as in the previous two exercises, define the integral as a matrix product of an integral matrix $I$ with $f$ such that $$If = \int f(x) dx$$, using the trapezoid rule for the discrete approximation to the integral. How should you handle the boundary points? What dimensions must this matrix have to produce the correct answer? 
+1. Read the following abstract from the journal article [Diabetes Care 17, 152-154 (1994)](http://care.diabetesjournals.org/content/17/2/152.abstract).  Based on the abstract (and [paper](TaisMethod.pdf)), explain in your own words what the results of the author are, and how they relate to the exercises in this assignment. Note that according to the [ISI Web of Science](http://apps.webofknowledge.com/), this article has been cited 213 times since 1994, according to the chart below:
+![Citation chart](citations.jpg)
+
+To cleanly present your work, create a Jupyter notebook ```cw6-discretecalc.ipynb``` that imports ```calculus.py``` and carefully discusses your answers to each question. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. 
 
 Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
