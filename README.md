@@ -1,23 +1,17 @@
-# PHYS220 CW 7
+# PHYS220 CW 8
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-07-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-08-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-08-YOURNAME)
 
-**Due date:** 2016/10/18
+**Due date:** 2016/10/25
 
 ## Specification
 
-**Reminder: We have switched to Python3 officially.**
+This week, you will explore the differences between ```python/numpy``` and the up-and-coming scientific programming language ```julia```. The syntax of ```julia``` is heavily inspired by a combination between ```python``` and ```MATLAB```, which we will also explore.
 
-Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
-
-1. p.683, C.1, in ```nonhomogeneous_linear_ODE.py```
-1. p.683, C.2, in ```nonlinear_ODE.py```
-
-To cleanly present your work, create a Jupyter notebook ```cw7-odes.ipynb``` that imports each file and carefully discusses your answers to each question. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. 
-
-Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
+1. Work through the [Julia Overview Slides](http://slides.com/profdressel/julia-overview/). Create the appropriate notebooks and test functions as you follow along. Discuss and ask questions.
+1. In a ```julia``` interpreter, run the command ```Pkg.generate("juliapkg","MIT")```. This generates a complete ```git``` repository with a template for a new ```julia``` package. Explore the created directory and its contents: explain in a notebook exactly what is created, and how it relates to what we have been learning in class.
 
 ## Assessment
 
