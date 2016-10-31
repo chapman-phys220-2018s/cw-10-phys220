@@ -1,24 +1,24 @@
-# PHYS220 CW 9
+# PHYS220 CW 10 
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-09-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-09-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-phys220-2016f/cw-10-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/cw-10-YOURNAME)
 
-**Due date:** 2016/11/01
+**Due date:** 2016/11/08
 
 ## Specification
 
-This week, you will explore the differences between ```python/numpy```, the up-and-coming scientific programming language ```julia```, and the established industry language ```MATLAB```.
+**Reminder: We have switched to Python3 officially.**
 
-1. Revisit the [Julia Overview Slides](http://slides.com/profdressel/julia-overview/). These slides describe how to create a complex plane as a 2-dimensional matrix of complex values, then map a function "julia" over this plane to convert it into a 2-dimensional matrix of positive integers, and finally to plot those integers as a heatmap to get a julia set. Your task this week will be to figure out how to do the same thing in MATLAB.
-1. Use the following resources from the info respository to quickly assess the similarities between Python, Julia, and MATLAB:
-  * [Learn Matlab in Y Minutes](https://learnxinyminutes.com/docs/matlab/)
-  * [Python vs. MATLAB](http://www.pyzo.org/python_vs_matlab.html)
-  * [MATLAB Tutorial](http://www.tutorialspoint.com/matlab/)
-  * [MATLAB-Python Dictionary](http://mathesaurus.sourceforge.net/matlab-numpy.html)
-  * [MATLAB-Julia-Python-R Comparison](http://sebastianraschka.com/Articles/2014_matrix_cheatsheet.html)
-1. In particular, you should find that the syntax for ```matplotlib``` in Python is almost identical to the syntax for plotting in MATLAB. Similarly, the array notation in Julia is almost identical to the matrix notation in MATLAB. These similarities should let you code up a solution relatively easily, based on the content of the Julia slides alone.
-1. Place your solution in a MATLAB script file ```juliaset.m```. Note that every MATLAB function should also be in its own file (e.g., ```julia.m```).
+Complete the following exercises from the primary textbook, placing your solutions into separate files. In each file, write the solution as a callable function, so that you can write suitable test functions that demonstrate correct output using the nose framework. GitHub will automatically run your tests on every commit, indicating any failures via the Travis framework with build status above.
+
+1. p.508, 8.15, in ```flip_coin_vec.py```. Learning to vectorize conditionals using numpy is this way is a useful prototype for the remainder of the assignment.
+1. Re-implement the code in ```walk2Dv.py``` shown on p.497 of the textbook. That is, fix this code so that it is correctly formatted, commented, and uses a proper ```__main__``` block for running it as a script on the command line. Use better (more descriptive) variable names, and generally clean up the algorithm.
+1. The output of the random walk code is a sequence of .pdf files that you can later collect into animated gifs using a simple bash command: ```convert -delay 50 -loop 0 tmp_*.pdf walk.gif```  This command uses the ImageMagick file conversion suite in linux, which is also installed in your Sage Cloud account. The delay parameter specifies frame delay in milliseconds. The loop parameter of 0 specifies an infinite number of loops for the gif. Create such an animated gif for the 2D random walk and commit it to the repository. (Do not commit any individual pdf frames.) Using 1000 particles that walk for 400 steps.
+
+To cleanly present your work, create a Jupyter notebook ```cw8-randomwalk.ipynb``` that imports each file and carefully discusses the algorithms being implemented. The notebook should be formatted professionally using Markdown headings, including your name and a brief description of each homework section. 
+
+Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recommend delegating one person from your group to edit the notebook, to avoid merge conflicts.
 
 ## Assessment
 
