@@ -17,23 +17,22 @@
 
 ## This Assignment
 
-* Clone this repository to your local machine.
+* Clone this repository to your local machine **using SSH**.
 * Edit the README.md file according to the instructions below.
-* Perform a ```commit``` so your local repository remembers the edits you've made
-* Now push the results back to the GitHub repository
+* Perform  ```git add``` and ```git commit -m "message"``` as needed so that your local repository remembers the edits you've made. Check status frequently with ```git status``` to avoid confusion.
+* Now ```git pull``` and ```git push``` to pull any changes from GitHub and then push your commits to the GitHub repository.
 * (See the tryGit resources in the info repository for more information.)
 
 ## General
 
 * Edit the README.md file:
-    * Change _\<your name\>_ and _\<date\>_ at the beginning of the file
-    * Edit the line ```[![Build Status](https://travis-ci.org/chapman-phys220-2016f/UPDATETHIS.svg?branch=master)](https://travis-ci.org/chapman-phys220-2016f/UPDATETHIS)``` replacing both instances of ```UPDATETHIS``` with the name of this repository (should be something like ```hw-1-<your git name>```)
+    * Edit the line ```[![Build Status](https://travis-ci.org/chapman-phys220-2017f/UPDATETHIS.svg?branch=master)](https://travis-ci.org/chapman-phys220-2017f/UPDATETHIS)``` replacing both instances of ```UPDATETHIS``` with the name of this repository (should be something like ```hw-1-<your git name>```)
     * Add your own text in the __Assessment__ section. This text is taken seriously for continued course development, so be honest.
     * Reread the __Honor Pledge__ again and 'sign' it with your name at the end
 
-* Connnect the repository to Travis CI
-    * On the GitHub site, go to the upper-right menu, then to ```Integrations```
-    * Click on ```Travis CI``` and Add the service. Authorize it if necessary.
+* Connect the repository to Travis CI
+    * On the Travis site log in and authorize GitHub if needed.
+    * Ask the instructor to enable testing on this repository.
 
 * Correctly document each source file
     * Refer to the templates in the info repository for more information    
