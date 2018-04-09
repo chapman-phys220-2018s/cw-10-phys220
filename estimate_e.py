@@ -10,7 +10,7 @@
 
 import numpy as np
 
-def estimate_integral(f,a,b,N=100000):
+def estimate_integral(f,a,b,N=1000):
     xs = np.random.uniform(a,b,N)
     return f(xs).sum() * (b-a)/N
 
