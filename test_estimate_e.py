@@ -13,8 +13,8 @@ import estimate_e as ee
 import nose
 
 def test_estimate_e():
-    trial = ee.est_e(np.exp,0,1,10000000000)
+    trial = ee.est_e(np.exp,0,1,10000000)
     actual = np.exp(1)
     print("Trial:", trial)
     print("Desired:", actual)
-    nose.tools.assert_almost_equal(actual,trial,3)
+    nose.tools.assert_almost_equal(actual,trial,2)
