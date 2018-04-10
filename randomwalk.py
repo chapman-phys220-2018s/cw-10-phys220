@@ -169,7 +169,7 @@ def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=
     ax.plot([-20,20],[20,20], 'k-')
     ax.plot([20,20],[20,4],'k-')
     ax.plot([20,-20],[-20,-20], 'k-')
-    ax.plot([20,-4],[20,-20], 'k-')
+    ax.plot([20,20],[-20,-4], 'k-')
     if title:  plt.title(title)
     if xlabel: plt.xlabel(xlabel)
     if ylabel: plt.ylabel(ylabel)
