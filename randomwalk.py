@@ -126,9 +126,11 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
     while True:
         for step in range(steps_per_frame):
             moves == np.random.randint(4, size=walkers)
-            xs += np.where(moves == EAST, 1, 0)
-            xs -= np.where(moves == WEST, 1, 0)
-            ys += np.where(moves == NORTH, 1, 0)
+            xs += np.where((moves == EAST) and ((xs != -21) and (ys > -21) and (ys <21)) and
+                           ((xs != 19) and (((ys > -21) and (ys < -5))) or ((ys < 21) and (ys > 5)), 1, 0)
+            xs -= np.where((moves == WEST) and ((xs != -19) and (ys > -21) and (ys <21)) and
+                           ((xs ! = 21) and (((ys > -21) and (ys < -5)) or ((ys < 21) and (ys > 5))), 1, 0)
+            ys += np.where((moves == NORTH), 1, 0)
             ys -= np.where(moves == SOUTH, 1, 0)
         yield (xs,ys)
 
