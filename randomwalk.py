@@ -125,13 +125,15 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
     EAST, WEST, NORTH, SOUTH = 0, 1, 2, 3 
     while True:
         for step in range(steps_per_frame):
-            moves == np.random.randint(4, size=walkers)
+            moves = np.random.randint(4, size=walkers)
             xs += np.where((moves == EAST) and ((xs != -21) and (ys > -21) and (ys <21)) and
-                           ((xs != 19) and (((ys > -21) and (ys < -5))) or ((ys < 21) and (ys > 5)), 1, 0)
+                           ((xs != 19) and ((ys > -21) and (ys < -5))) or ((ys < 21) and (ys > 5)), 1, 0)
             xs -= np.where((moves == WEST) and ((xs != -19) and (ys > -21) and (ys <21)) and
-                           ((xs ! = 21) and (((ys > -21) and (ys < -5)) or ((ys < 21) and (ys > 5))), 1, 0)
-            ys += np.where((moves == NORTH), 1, 0)
-            ys -= np.where(moves == SOUTH, 1, 0)
+                           ((xs != 21) and ((ys > -21) and (ys < -5)) or ((ys < 21) and (ys > 5))), 1, 0)
+            ys += np.where((moves == NORTH) and ((ys != 19) and (xs > -21) and (xs < 21)) and 
+                           ((ys != -21) and (xs > -21) and (xs < 21)), 1, 0)
+            ys -= np.where((moves == SOUTH) and ((ys != 21) and (xs > -21) and (xs < 21)) and 
+                           ((ys != -19) and (xs > -21) and (xs < 21)), 1, 0)
         yield (xs,ys)
 
 def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=100,
