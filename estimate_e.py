@@ -6,6 +6,9 @@
 #Chang254@mail.chapman.edu
 #Devon Ball
 #2313078
+#Myranda Hoggatt
+#2285495
+#hogga102@mail.chapman.edu
 #dball@chapman.edu
 #PHYS220 Spring 2018
 #CW10
