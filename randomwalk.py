@@ -34,11 +34,11 @@ def walk_gen(walkers=10, steps_per_frame=1):
     a 2D lattice indexed by integers. Each walker may move in one of four
     cardinal directions randomly, on each time step. The generator yields all
     new positions with each iteration.
-    
+
     Args:
       walkers : int, number of walkers
       steps_per_frame : number of internal steps to take before each yield
-    
+
     Returns:
       (xs, ys) : tuple of arrays of x and y coordinate integers for all walkers
     """
@@ -61,7 +61,7 @@ def plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=100,
       - Return a Jupyter HTML5 wrapper around a rendered mp4 video of the animation
       - Create an animated gif file of the animation
     The first mode is default and recommended for in-notebook rendering.
-    
+
     Args:
       frame_gen : Generator that yields successive tuples (xs, ys) of 
                   points, as domain and range arrays, to plot as frames.
@@ -74,10 +74,10 @@ def plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=100,
       xlabel : plot x axis label (optional)
       ylabel : plot y axis label (optional)
       gif : Boolean, if true render gif file instead of outputting HTML5 
-    
+
     Returns:
       HTML object containing mp4 video of animation (when gif false)
-    
+
     Effects:
       Saves a gif file containing the animation (when gif true)
     """
@@ -88,30 +88,30 @@ def plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=100,
     if title:  plt.title(title)
     if xlabel: plt.xlabel(xlabel)
     if ylabel: plt.ylabel(ylabel)
-    
+
     # Draw an empty line and save the handle to update later
     line, = ax.plot([], [], 'r.', alpha=0.4)
-    
+
     # Define how to generate a blank frame
     def init_frame():
         line.set_data([],[])
         return (line,)
-    
+
     # Define how to update a frame 
     def animate(i):
         x,y = next(frame_gen)
         line.set_data(x,y)
         return (line,)
-    
+
     # Define animation object using frame generator
     # Use blit to redraw only the changes that were made
     anim = animation.FuncAnimation(fig, animate, init_func=init_frame, 
                                    frames=range(max_frames), interval=delay, 
                                    save_count=max_frames, blit=True)
-    
+
     # Tidy up stray plot within the notebook itself
     plt.close()
-    
+
     if gif:
         # Render animation as animated gif file
         anim.save(frame_gen.__name__+'.gif', writer='imagemagick')
@@ -128,11 +128,11 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
     cardinal directions randomly, on each time step.  Each walker is also
     constrained to a box from x = -20 to x = 20 and y = -20 to y = -4,
     y = 4 to y =20.  The generator yields all new positions with each iteration.
-    
+
     Args:
       walkers : int, number of walkers
       steps_per_frame : number of internal steps to take before each yield
-    
+
     Returns:
       (xs, ys) : tuple of arrays of x and y coordinate integers for all walkers
     """
@@ -163,7 +163,7 @@ def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=
     The first mode is default and recommended for in-notebook rendering.
     This specific function is intended for use with the new_walk_gen as it also draws
     the box that constrains walkers in new_walk_gen.
-    
+
     Args:
       frame_gen : Generator that yields successive tuples (xs, ys) of 
                   points, as domain and range arrays, to plot as frames.
@@ -176,10 +176,10 @@ def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=
       xlabel : plot x axis label (optional)
       ylabel : plot y axis label (optional)
       gif : Boolean, if true render gif file instead of outputting HTML5 
-    
+
     Returns:
       HTML object containing mp4 video of animation (when gif false)
-    
+
     Effects:
       Saves a gif file containing the animation (when gif true)
     """
@@ -195,30 +195,30 @@ def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=
     if title:  plt.title(title)
     if xlabel: plt.xlabel(xlabel)
     if ylabel: plt.ylabel(ylabel)
-    
+
     # Draw an empty line and save the handle to update later
     line, = ax.plot([], [], 'r.', alpha=0.4)
-    
+
     # Define how to generate a blank frame
     def init_frame():
         line.set_data([],[])
         return (line,)
-    
-    # Define how to update a frame 
+
+    # Define how to update a frame
     def animate(i):
         x,y = next(frame_gen)
         line.set_data(x,y)
         return (line,)
-    
+
     # Define animation object using frame generator
     # Use blit to redraw only the changes that were made
     anim = animation.FuncAnimation(fig, animate, init_func=init_frame, 
                                    frames=range(max_frames), interval=delay, 
                                    save_count=max_frames, blit=True)
-    
+
     # Tidy up stray plot within the notebook itself
     plt.close()
-    
+
     if gif:
         # Render animation as animated gif file
         anim.save(frame_gen.__name__+'.gif', writer='imagemagick')
