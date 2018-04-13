@@ -110,8 +110,9 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
     """Generator for 2D random walkers
     Yields x and y coordinate arrays for particles that randomly walk around
     a 2D lattice indexed by integers. Each walker may move in one of four
-    cardinal directions randomly, on each time step. The generator yields all
-    new positions with each iteration.
+    cardinal directions randomly, on each time step.  Each walker is also
+    constrained to a box from x = -20 to x = 20 and y = -20 to y = -4,
+    y = 4 to y =20.  The generator yields all new positions with each iteration.
     
     Args:
       walkers : int, number of walkers
@@ -126,16 +127,16 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
     while True:
         for step in range(steps_per_frame):
             moves = np.random.randint(4, size=walkers)
-            xs += np.where(np.all((moves == EAST),np.all((xs != -21),(ys > -21), (ys <21)),
-                           np.all((xs != 19), np.any(np.all((ys > -21), (ys < -5)), np.all((ys < 21) and (ys > 5)))))
-                           , 1, 0)
-            xs -= np.where(np.all((moves == WEST),np.all((xs != -19),(ys > -21),(ys <21)),
-                           np.all((xs != 21), np.any(np.all((ys > -21), (ys < -5)),np.all((ys < 21), (ys > 5)))))
-                           , 1, 0)
-            ys += np.where(np.all((moves == NORTH),np.all((ys != 19), (xs > -21), (xs < 21)), 
-                           np.all((ys != -21),(xs > -21),(xs < 21))), 1, 0)
-            ys -= np.where(np.all((moves == SOUTH),np.all((ys != 21),(xs > -21),(xs < 21)), 
-                           np.all((ys != -19),(xs > -21),(xs < 21))), 1, 0)
+            xs += np.where(np.logical_and((moves == EAST),np.logical_and((xs != -21),(ys > -21), (ys <21)),
+                           np.logical_and((xs != 19), np.logical_or(np.logical_and((ys > -21), (ys < -5)), 
+                           np.logical_and((ys < 21), (ys > 5))))), 1, 0)
+            xs -= np.where(np.logical_and((moves == WEST),np.logical_and((xs != -19),(ys > -21),(ys <21)),
+                           np.logical_and((xs != 20), np.logical_or(np.logical_and((ys > -21), (ys < -5)),
+                           np.logical_and((ys < 21), (ys > 5))))), 1, 0)
+            ys += np.where(np.logical_and((moves == NORTH),np.logical_and((ys != 19), (xs > -21), (xs < 21)), 
+                           np.logical_and((ys != -21),(xs > -21),(xs < 21))), 1, 0)
+            ys -= np.where(np.logical_and((moves == SOUTH),np.logical_and((ys != 21),(xs > -21),(xs < 21)), 
+                           np.logical_and((ys != -19),(xs > -21),(xs < 21))), 1, 0)
         yield (xs,ys)
 
 def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=100,
@@ -145,6 +146,8 @@ def new_plot_anim(frame_gen, xlim=(-30,30), ylim=(-30,30), delay=20, max_frames=
       - Return a Jupyter HTML5 wrapper around a rendered mp4 video of the animation
       - Create an animated gif file of the animation
     The first mode is default and recommended for in-notebook rendering.
+    This specific function is intended for use with the new_walk_gen as it also draws
+    the box that constrains walkers in new_walk_gen.
     
     Args:
       frame_gen : Generator that yields successive tuples (xs, ys) of 
