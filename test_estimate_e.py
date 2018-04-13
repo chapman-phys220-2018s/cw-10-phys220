@@ -9,7 +9,8 @@
 #dball@chapman.edu
 #PHYS220 Spring 2018
 #CW10
-###Exercise 2
+#Exercise 2
+###
 
 import numpy as np
 import estimate_e as ee
