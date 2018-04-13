@@ -4,9 +4,13 @@
 #Daniel Chang
 #2260161
 #Chang254@mail.chapman.edu
+#Devon Ball
+#2313078
+#dball@chapman.edu
 #PHYS220 Spring 2018
 #CW10
-###Exercise 2
+#Exercise 2
+###
 
 import numpy as np
 
