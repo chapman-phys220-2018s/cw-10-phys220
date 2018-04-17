@@ -16,7 +16,7 @@ Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recomme
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+**This assignment was interesting, but the walkers were a challenge.  One difficulty is that our trial server could not handle more than 300 frames, however, this is also an important lesson because it demonstrates the place of efficiency in coding.  At some point you will hit a wall of computing power or you will just be using more resources than you need to, so it is best to be as efficient as possible. - Daniel**
 
 ## Honor Pledge
 
@@ -27,4 +27,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**Devon Ball, Myranda Hoggatt**
+**Devon Ball, Myranda Hoggatt, Daniel**
