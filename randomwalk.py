@@ -149,11 +149,11 @@ def new_walk_gen(walkers=10, steps_per_frame=1):
             xs -= np.where(np.logical_and(moves == WEST,np.logical_and(np.logical_not(np.logical_and(xs == -19,
                            np.logical_and(ys > -21, ys <21))), np.logical_not(np.logical_and(xs == 20, np.logical_or
                           (np.logical_and(ys > -21, ys < -5),np.logical_and(ys < 21, ys > 5)))))), 1, 0)
-            ys += np.where(np.logical_and(moves == NORTH,np.logical_and(np.logical_not(np.logical_and(ys != 19,
-                           np.logical_and(xs > -21, xs < 21))), np.logical_not(np.logical_and(ys != -21,np.logical_and(
+            ys += np.where(np.logical_and(moves == NORTH,np.logical_and(np.logical_not(np.logical_and(ys == 19,
+                           np.logical_and(xs > -21, xs < 21))), np.logical_not(np.logical_and(ys == -21,np.logical_and(
                            xs > -21,xs < 21))))), 1, 0)
-            ys -= np.where(np.logical_and(moves == SOUTH,np.logical_and(np.logical_not(np.logical_and(ys != 21,
-                           np.logical_and(xs > -21,xs < 21))), np.logical_not(np.logical_and(ys != -19,np.logical_and(
+            ys -= np.where(np.logical_and(moves == SOUTH,np.logical_and(np.logical_not(np.logical_and(ys == 21,
+                           np.logical_and(xs > -21,xs < 21))), np.logical_not(np.logical_and(ys == -19,np.logical_and(
                            xs > -21,xs < 21))))), 1, 0)
         yield (xs,ys)
             #xs += np.where(np.logical_and(moves == EAST, ))
