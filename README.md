@@ -14,9 +14,9 @@ Pro-tip: using git to manage conflicts on Jupyter notebooks is a pain. I recomme
 
 ## Assessment
 
-Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
-
 **This assignment was interesting, but the walkers were a challenge.  One difficulty is that our trial server could not handle more than 300 frames, however, this is also an important lesson because it demonstrates the place of efficiency in coding.  At some point you will hit a wall of computing power or you will just be using more resources than you need to, so it is best to be as efficient as possible. - Daniel**
+
+It was cool to see the connection of the walkers to molecules in a gas, for example and to see the connection to the dispersion of entropy. -MH
 
 ## Honor Pledge
 
